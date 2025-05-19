@@ -33,32 +33,6 @@ Data Loading → Preprocessing → Train/Test Split → Model Training → Evalu
 - Confusion Matrix using seaborn heatmap
 - Classification metrics via `classification_report`
 
-## Recommended Enhancements
-
-Consider adding the following for deeper insight:
-
-1. **Feature Importance Plot**
-
-```python
-importances = model.feature_importances_
-feat_names = X.columns
-sorted_idx = importances.argsort()
-
-plt.figure(figsize=(10, 6))
-plt.barh(feat_names[sorted_idx], importances[sorted_idx])
-plt.xlabel("Feature Importance")
-plt.title("Random Forest Feature Importances")
-plt.tight_layout()
-plt.show()
-```
-
-2. **Seaborn Pairplot (for Exploratory Data Analysis)**
-
-```python
-import seaborn as sns
-sns.pairplot(df, hue='target')
-```
-
 ## Requirements
 
 ```bash
@@ -72,7 +46,3 @@ git clone https://github.com/dasarlamallikarjun/Random_Forest.git
 cd Random_Forest
 jupyter notebook Final.ipynb
 ```
-
-## Contact
-
-For questions or suggestions, feel free to open an issue or reach out via email.
